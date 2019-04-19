@@ -15,4 +15,5 @@ public class WelcomeController {
 		
 		return "welcome";
 	}
+	
 }
