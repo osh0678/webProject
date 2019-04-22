@@ -21,7 +21,7 @@ public class UserController {
 		users.add(user);
 		
 		logger.info("데이터가 정상적으로 반영 되었습니다.");
-		return "index";
+		return "redirect:/list";
 	}
 
 	@GetMapping("/list")
