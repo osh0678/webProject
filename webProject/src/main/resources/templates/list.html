@@ -43,13 +43,23 @@
                <th>사용자 아이디 </th>
                <th>이름</th>
                <th>이메일</th>
+               <th>주소</th>
+               <th>핸드폰번호</th>
+               <th>전화번호</th>
+               <th>VIP</th>
+               <th>포인트</th>
             </tr>
          </thead>
          <tbody>
                <tr th:each="row: ${users}">
                   <td th:text="${row.userId}"></td>
-                  <td th:text="${row.name}"></td>
+                  <td th:text="${row.userNm}"></td>
                   <td th:text="${row.email}"></td>
+                  <td th:text="${row.addr}"></td>
+                  <td th:text="${row.mobileNo}"></td>
+                  <td th:text="${row.telNo}"></td>
+                  <td th:text="${row.vipType}"></td>
+                  <td th:text="${row.buyPnt}"></td>
                </tr>
          </tbody>
       </table>

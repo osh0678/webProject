@@ -9,38 +9,45 @@ import javax.persistence.Id;
 public class User {
 	@Id
 	@GeneratedValue
-	private Long id;
+	private Long userNo;
 
 	@Column(nullable=false, length=20)
-	private String user_id;
+	private String userId;
 	
-	private String user_nm;
-	private String post_no;
+	private String userNm;
+	private String postNo;
 	private String addr;
 	private String email;
-	private String mobile_no;
-	private String tel_no;
-	private String vip_type;
-	private String buy_pnt;
-	private String reg_dt;
-	private String upt_dt;
-	public String getUser_id() {
-		return user_id;
+	private String mobileNo;
+	private String telNo;
+	private String vipType;
+	private String buyPnt;
+	private String regDt;
+	private String uptDt;
+	
+	public Long getUserNo() {
+		return userNo;
 	}
-	public void setUser_id(String user_id) {
-		this.user_id = user_id;
+	public void setUserNo(Long userNo) {
+		this.userNo = userNo;
 	}
-	public String getUser_nm() {
-		return user_nm;
+	public String getUserId() {
+		return userId;
 	}
-	public void setUser_nm(String user_nm) {
-		this.user_nm = user_nm;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
-	public String getPost_no() {
-		return post_no;
+	public String getUserNm() {
+		return userNm;
 	}
-	public void setPost_no(String post_no) {
-		this.post_no = post_no;
+	public void setUserNm(String userNm) {
+		this.userNm = userNm;
+	}
+	public String getPostNo() {
+		return postNo;
+	}
+	public void setPostNo(String postNo) {
+		this.postNo = postNo;
 	}
 	public String getAddr() {
 		return addr;
@@ -54,43 +61,41 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getMobile_no() {
-		return mobile_no;
+	public String getMobileNo() {
+		return mobileNo;
 	}
-	public void setMobile_no(String mobile_no) {
-		this.mobile_no = mobile_no;
+	public void setMobileNo(String mobileNo) {
+		this.mobileNo = mobileNo;
 	}
-	public String getTel_no() {
-		return tel_no;
+	public String getTelNo() {
+		return telNo;
 	}
-	public void setTel_no(String tel_no) {
-		this.tel_no = tel_no;
+	public void setTelNo(String telNo) {
+		this.telNo = telNo;
 	}
-	public String getVip_type() {
-		return vip_type;
+	public String getVipType() {
+		return vipType;
 	}
-	public void setVip_type(String vip_type) {
-		this.vip_type = vip_type;
+	public void setVipType(String vipType) {
+		this.vipType = vipType;
 	}
-	public String getBuy_pnt() {
-		return buy_pnt;
+	public String getBuyPnt() {
+		return buyPnt;
 	}
-	public void setBuy_pnt(String buy_pnt) {
-		this.buy_pnt = buy_pnt;
+	public void setBuyPnt(String buyPnt) {
+		this.buyPnt = buyPnt;
 	}
-	public String getReg_dt() {
-		return reg_dt;
+	public String getRegDt() {
+		return regDt;
 	}
-	public void setReg_dt(String reg_dt) {
-		this.reg_dt = reg_dt;
+	public void setRegDt(String regDt) {
+		this.regDt = regDt;
 	}
-	public String getUpt_dt() {
-		return upt_dt;
+	public String getUptDt() {
+		return uptDt;
 	}
-	public void setUpt_dt(String upt_dt) {
-		this.upt_dt = upt_dt;
+	public void setUptDt(String uptDt) {
+		this.uptDt = uptDt;
 	}
-
-	
 
 }

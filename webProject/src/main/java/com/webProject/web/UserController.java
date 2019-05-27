@@ -24,10 +24,10 @@ public class UserController {
 	
 	@PostMapping("/create")
 	public String create(User user, Model model) {
-		
+		System.out.println("들어왔나?");
 		users.add(user);
+		logger.info(user + "입니다.");
 		useRepository.save(user);
-		logger.info("user 리스트");
 		return "redirect:/list";
 	}
 
@@ -35,6 +35,6 @@ public class UserController {
 	public String list(Model model) {
 //		model.addAttribute("users", users);
 		model.addAttribute("users", useRepository.findAll());
-		return "list";
+		return "list.html";
 	}
 }
