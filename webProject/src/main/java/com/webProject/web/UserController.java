@@ -22,19 +22,19 @@ public class UserController {
 	@Autowired
 	private UserRepository useRepository;
 	
-	@PostMapping("/create")
+	@PostMapping("/user/create")
 	public String create(User user, Model model) {
 		System.out.println("들어왔나?");
 		users.add(user);
 		logger.info(user + "입니다.");
 		useRepository.save(user);
-		return "redirect:/list";
+		return "redirect:/user/list";
 	}
 
-	@GetMapping("/list")
+	@GetMapping("/user/list")
 	public String list(Model model) {
 //		model.addAttribute("users", users);
 		model.addAttribute("users", useRepository.findAll());
-		return "list.html";
+		return "/user/list";
 	}
 }
