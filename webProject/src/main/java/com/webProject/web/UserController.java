@@ -10,11 +10,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.webProject.domain.User;
 import com.webProject.domain.UserRepository;
 
 @Controller
+@RequestMapping("/users")
 public class UserController {
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 	private List<User> users = new ArrayList<User>();
@@ -22,16 +24,16 @@ public class UserController {
 	@Autowired
 	private UserRepository useRepository;
 	
-	@PostMapping("/user/create")
+	@PostMapping("")
 	public String create(User user, Model model) {
 		System.out.println("들어왔나?");
 		users.add(user);
 		logger.info(user + "입니다.");
 		useRepository.save(user);
-		return "redirect:/user/list";
+		return "redirect:/users";
 	}
 
-	@GetMapping("/user/list")
+	@GetMapping("")
 	public String list(Model model) {
 //		model.addAttribute("users", users);
 		model.addAttribute("users", useRepository.findAll());
